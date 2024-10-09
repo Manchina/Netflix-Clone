@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom'
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const handleLogin = (e) => {
-    e.preventDefault(); 
-    console.log("Email: ", email, ", Password: ", password);
-  }
+    e.preventDefault();
+    console.log("Email:", email);
+    console.log("Password:", password);
+  };
   
   return (
     <div className='h-screen w-full hero-bg'>
