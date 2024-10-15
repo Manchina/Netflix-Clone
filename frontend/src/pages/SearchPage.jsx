@@ -24,7 +24,8 @@ const SearchPage = () => {
 		e.preventDefault();
 		try {
 			const res = await axios.get(`/api/v1/search/${activeTab}/${searchTerm}`);
-			setResults(res.data.content);
+	        console.log(res.data)
+			setResults(res.data.constent);
 		} catch (error) {
 			if (error.response.status === 404) {
 				toast.error("Nothing found, make sure you are searching under the right category");
